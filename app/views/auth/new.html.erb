@@ -1,0 +1,14 @@
+<%= form_for :auth do |f| %>
+  <%= f.hidden_field :url, value: request.original_url %>
+
+  <%= f.label :username %>
+  <%= f.text_field :username %> <br/>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %> <br/>
+
+  <%= f.label :remember %>
+  <%= f.check_box :remember, value: 'yes' %> <br/>
+
+  <%= f.submit "Login" %>
+<% end %>

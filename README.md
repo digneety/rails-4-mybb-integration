@@ -8,12 +8,12 @@ Create an additionally connection to mybb database. You can see that in
 **app/models/user.rb** I have used the name ``mybb_database_{production,development}``. You can change however you like due to the MIT license.
 
 My routes were follows 
+
 ``
   root 'welcome#index'
   get 'auth/sign_in' => 'auth#new', as: 'sign_in'
   post 'auth/sign_in' => 'auth#create'
   delete 'auth/sign_out' => 'auth#destroy', as: 'sign_out'
-
 ``
 
 In **app/controllers/auth_controller.rb** you need to change variables to own

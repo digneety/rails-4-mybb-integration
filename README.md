@@ -1,6 +1,7 @@
-## Rails-MyBB Integration
+## Rails 4 and MyBB 1.8 User Scheme Integration 
 
-These "snippets" covers basic user authentication with MyBB 1.8 and Rails 4
+These "snippets" covers basic user authentication with MyBB 1.8 and Rails 4. If I find more time I will create a rails gem.
+
 ### How to
 
 Create an additionally connection to mybb database. You can see that in

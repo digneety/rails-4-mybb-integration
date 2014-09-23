@@ -4,7 +4,7 @@ These "snippets" covers basic user authentication with MyBB 1.8 and Rails 4. If 
 
 ### How to
 
-Create an additionally connection to mybb database. You can see that in
+Create an additional connection to mybb database. You can see that in
 **app/models/user.rb** I have used the name ``mybb_database_{production,development}``. You can change however you like due to the MIT license.
 
 My routes were follows 

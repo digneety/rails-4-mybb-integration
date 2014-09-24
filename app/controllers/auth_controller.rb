@@ -16,9 +16,15 @@ class AuthController < ApplicationController
     require 'uri'
     require 'net/http'
     
-    cookies[:sid] = return_login_sid
-    if User.logged_in? cookies[:sid]
-      flash[:notice] = "You have been successfully signed in"
+    sid_cookie = return_login_sid
+
+    if User.logged_in? sid_cookie
+      if User.banned? sid_cookie
+        flash[:notice] = "Error: You are banned"
+      else
+        cookies[:sid] = sid_cookie
+        flash[:notice] = "You have been successfully signed in"
+      end
       redirect_to root_path
     else
       flash[:notice] = "Some errors :("

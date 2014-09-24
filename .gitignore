@@ -28,6 +28,8 @@
 /public
 /lib
 /log
+/spec
+.rspec
 Gemfile*
 config.*
 Rakefile
